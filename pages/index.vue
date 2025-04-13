@@ -194,6 +194,61 @@
             </nuxtLink>
           </div>
         </div>
+
+        <div
+          class="p-6 bg-gradient-to-b from-[rgba(211,233,250,1)] to-white border rounded-md mt-4"
+        >
+          <div class="flex justify-between pb-2 border-b">
+            <span class="flex">
+              <CircleSmall class="text-red-500" />
+              <nuxt-link to="/" class="font-medium">CHỦ ĐỀ NỔI BẬT</nuxt-link>
+            </span>
+            <nuxt-link to="/" class="text-blue-500 font-medium"
+              >Tất cả</nuxt-link
+            >
+          </div>
+          <div class="mt-2 flex gap-4 overflow-x-auto scroll-smooth pb-2">
+            <nuxtLink
+              :to="c.slug"
+              v-for="(c, index) in cs"
+              :key="index"
+              class="min-w-[60%] flex-shrink-0 bg-gray-50"
+            >
+              <img :src="c.img" alt="" class="w-full h-40 object-cover" />
+              <p class="font-medium text-xl hover:text-red-500">
+                {{ c.desc }}
+              </p>
+            </nuxtLink>
+          </div>
+        </div>
+
+        <div
+          class="p-6 bg-gradient-to-b from-[rgba(211,233,250,1)] to-white border rounded-md mt-4"
+        >
+          <div class="flex justify-between pb-2 border-b">
+            <span class="flex">
+              <CircleSmall class="text-red-500" />
+              <nuxt-link to="/" class="font-medium">CHỦ ĐỀ NỔI BẬT</nuxt-link>
+            </span>
+            <nuxt-link to="/" class="text-blue-500 font-medium"
+              >Tất cả</nuxt-link
+            >
+          </div>
+
+          <div class="mt-2 flex gap-4 overflow-x-auto scroll-smooth pb-2">
+            <nuxtLink
+              :to="c.slug"
+              v-for="(c, index) in cs"
+              :key="index"
+              class="min-w-[60%] flex-shrink-0 bg-gray-50"
+            >
+              <img :src="c.img" alt="" class="w-full h-40 object-cover" />
+              <p class="font-medium text-xl hover:text-red-500">
+                {{ c.desc }}
+              </p>
+            </nuxtLink>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
